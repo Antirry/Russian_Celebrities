@@ -1,0 +1,81 @@
+Source_Parsing_1.py
+
+print(locals()["URL_heroes" + str(0)])
+print(locals()["URL_heroes" + str(1)])
+print(locals()["URL_heroes" + str(2)])
+print(locals()["URL_heroes" + str(3)])
+print(locals()["URL_heroes" + str(4)])
+print(locals()["URL_heroes" + str(5)])
+print(locals()["URL_heroes" + str(6)])
+print(locals()["URL_heroes" + str(7)])
+print(locals()["URL_heroes" + str(8)])
+print(locals()["URL_heroes" + str(9)])
+
+Wikipedia_Parsing_2.py
+
+print(globals()["Data_Page_title" + str(0)])
+print(globals()["Data_heroes_title" + str(0)])
+print(globals()["Data_heroes_Description_Image" + str(0)])
+print(globals()["Data_heroes_Image_URL" + str(0)])
+
+print(globals()["Data_Page_title" + str(1)])
+print(globals()["Data_heroes_title" + str(1)])
+print(globals()["Data_heroes_Description_Image" + str(1)])
+print(globals()["Data_heroes_Image_URL" + str(1)])
+
+print(globals()["Data_Page_title" + str(2)])
+print(globals()["Data_heroes_title" + str(2)])
+print(globals()["Data_heroes_Description_Image" + str(2)])
+print(globals()["Data_heroes_Image_URL" + str(2)])
+
+print(globals()["Data_Page_title" + str(3)])
+print(globals()["Data_heroes_title" + str(3)])
+print(globals()["Data_heroes_Description_Image" + str(3)])
+print(globals()["Data_heroes_Image_URL" + str(3)])
+
+print(globals()["Data_Page_title" + str(4)])
+print(globals()["Data_heroes_title" + str(4)])
+print(globals()["Data_heroes_Description_Image" + str(4)])
+print(globals()["Data_heroes_Image_URL" + str(4)])
+
+print(globals()["Data_Page_title" + str(5)])
+print(globals()["Data_heroes_title" + str(5)])
+print(globals()["Data_heroes_Description_Image" + str(5)])
+print(globals()["Data_heroes_Image_URL" + str(5)])
+
+print(globals()["Data_Page_title" + str(6)])
+print(globals()["Data_heroes_title" + str(6)])
+print(globals()["Data_heroes_Description_Image" + str(6)])
+print(globals()["Data_heroes_Image_URL" + str(6)])
+
+print(globals()["Data_Page_title" + str(7)])
+print(globals()["Data_heroes_title" + str(7)])
+print(globals()["Data_heroes_Description_Image" + str(7)])
+print(globals()["Data_heroes_Image_URL" + str(7)])
+
+print(globals()["Data_Page_title" + str(8)])
+print(globals()["Data_heroes_title" + str(8)])
+print(globals()["Data_heroes_Description_Image" + str(8)])
+print(globals()["Data_heroes_Image_URL" + str(8)])
+
+print(globals()["Data_Page_title" + str(9)])
+print(globals()["Data_heroes_title" + str(9)])
+print(globals()["Data_heroes_Description_Image" + str(9)])
+print(globals()["Data_heroes_Image_URL" + str(9)])
+
+ВЫВОД ВСЕХ ПЕРЕМЕННЫХ
+
+# Для того чтобы посмотреть переменные
+# -
+# To view variables in memory program ->
+# def MyWho():
+#     print([v for v in globals().keys() if not v.startswith('_')])
+# MyWho()
+
+# URL_heroes_list = []
+#
+# for variable in variables_Source_Parsing_1:
+#     if "URL_heroes" in variable:
+#         URL_heroes_list.append(variable)
+
+variables_Source_Parsing_1 = [v for v in globals().keys() if not v.startswith('_')]

@@ -1,0 +1,112 @@
+# for Image in Images:
+#     if ".jpg" in Image or ".png" in Image:
+#         # if j_break == 0:
+#         Image_URL = []
+#
+#         Image1 = Image.startswith("/wiki/")
+#         if Image1:
+#             Image_URL = "http://ru.wikipedia.org" + Image
+#             Image_URL.append(Image_URL)
+#
+#         Image_req1 = requests.get(Image_URL)
+#         Image_req = Image_req1.text.encode('utf-8')
+#         Image_soup = BeautifulSoup(Image_req, "lxml")
+#
+#         Image_body = Image_soup.find("body")
+#         Image_mw_body = Image_body.find("div", class_="mw-body")
+#
+#         Image_Page_title = Image_mw_body.find("h1", class_="firstHeading mw-first-heading").text
+#         Image_Page_title = Image_Page_title.replace("Файл:", "")
+#
+#         if ".jpg" in Image_Page_title:
+#             Image_Page_title = Image_Page_title.replace(".jpg", "")
+#             globals()["Data_heroes_Description_Image" + str(i)].append(Image_Page_title)
+#         elif ".png" in Image_Page_title:
+#             Image_Page_title = Image_Page_title.replace(".png", "")
+#             globals()["Data_heroes_Description_Image" + str(i)].append(Image_Page_title)
+#
+#         Image_vector_body = Image_mw_body.find("div", class_="vector-body")
+#         Image_mw_body_content = Image_vector_body.find("div", class_="mw-body-content")
+#         fullImageLink = Image_mw_body_content.find("div", class_="fullImageLink")
+#         Image_a = fullImageLink.find("a")
+#         Image_link = str(Image_a.get("href"))
+#         Image_link = "https:" + Image_link
+#         print()
+#         globals()["Data_heroes_Image_URL" + str(i)].append(Image_link)
+#         break
+#
+# else:
+#     globals()["Data_heroes_Image_URL" + str(i)].append("Нет картинки")
+#     globals()["Data_heroes_Description_Image" + str(i)].append("Нет описания картинки")
+
+WIKIPEDIA_PARSING
+
+            # # УДАЛЕНИЕ ИЗ ТЕГА ЭЛЕМЕНТОВ UTF - 8
+            # p_text = p_text.replace("\n", "").replace("\xa0—", "").replace("\xa0", "")
+            # p_text = re.sub(r'\[\d+\]', '', p)
+            #
+            # if len(p_text) < 500:
+            #     globals()["Data_heroes_title" + str(i)].append(text)
+            # else:
+            #     text = p[:500]
+            #     globals()["Data_heroes_title" + str(i)].append(text)
+            #
+
+Images = [tag.find('img').get('src', '') if tag.find('img') else '' for tag in trs]
+Images_updated = []
+print(Images)
+
+for Image in Images:
+    if Image:
+        Images_updated.append(Image)
+
+if Page_title == "Путин, Владимир Владимирович":
+    Image_link = "https:" + str(Images_updated[1])
+    globals()["Data_heroes_Image_URL" + str(i)].append(Image_link)
+else:
+    Image_link = "https:" + str(Images_updated[0])
+    globals()["Data_heroes_Image_URL" + str(i)].append(Image_link)
+
+
+            # # ПОИСК ТЕГОВ ТЕКСТА, ЕСЛИ НЕТ ТО ПУСТО, БЕЗ ЭТОГО НЕ БУДЕТ РАБОТАТЬ ЦИКЛ
+            # Description_Images = [tag.find('img').get('alt') if tag.find('img') else '' for tag in trs]
+            # if Description_Images is None:
+            # print(Description_Images)
+            # Description_Images_updated = []
+            #
+            # for Description_Image in Description_Images:
+            #     if Description_Image:
+            #         Description_Images_updated.append(Description_Image)
+            #
+            # list_file_name_extension = ['JPG','PNG','GIF','jpg','png','gif']
+            # # Итератор (iterator) - это объект, который возвращает свои элементы по одному за раз
+            # # extension - расширение
+            # i_2 = iter(list_file_name_extension)
+            # i_1 = iter(Description_Images_updated)
+            # list_Description_Images_updated = []
+            # Description_Image_new = []
+            #
+            # if len(Description_Images_updated):
+            #
+            #     for Description_Image_iterator in i_1:
+            #         for file_name_extension_iterator in i_2:
+            #             if file_name_extension_iterator in Description_Image_iterator or len(Description_Image_iterator) > 40:
+            #                 list_Description_Images_updated.append(Description_Image_iterator)
+            #
+            #     Description_Image_new = list(set(list_Description_Images_updated))
+            #
+            #     print(Description_Image_new)
+            # globals()["Data_heroes_Description_Image" + str(i)].append()
+
+            # ПОИСК ТЕГОВ ССЫЛОК, ЕСЛИ НЕТ ТО ПУСТО, БЕЗ ЭТОГО НЕ БУДЕТ РАБОТАТЬ ЦИКЛ
+            # так как теги с нужной информацией расположены в разных местах то и искать их проще циклом
+            # и все это в массиве - списке для повышения скорости работы
+
+            # Image_updated =
+            #
+            # Image_link = "https:" + str(Images_updated[0])
+            # globals()["Data_heroes_Image_URL" + str(i)].append(Image_link)
+            #
+            # else:
+            #     globals()["Data_heroes_Description_Image" + str(i)].append("Нет описания картинки")
+            #     globals()["Data_heroes_Image_URL" + str(i)].append("Нет картинки")
