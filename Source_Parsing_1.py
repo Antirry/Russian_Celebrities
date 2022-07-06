@@ -30,7 +30,7 @@ for gallery in galleries:
         URL_hero = galleryBox.find("div").find("div", class_="gallerytext").find("p").find("b").find("a").get("href")
         URL_hero = str(URL_hero)
 
-        if str("http://ru.wikipedia.org/wiki/") in URL_hero:
+        if str("ru.wikipedia.org") in URL_hero:
             globals()["URL_heroes" + str(i)].append(URL_hero)
 
         elif str("http://www.hrono.ru/biograf/bio_s/stepan_tverd.html") in URL_hero:
@@ -52,3 +52,14 @@ for gallery in galleries:
         elif str("http://coollib.com") or str("http://ruskline.ru"):
             continue
     i += 1
+
+print(locals()["URL_heroes" + str(0)])
+print(locals()["URL_heroes" + str(1)])
+print(locals()["URL_heroes" + str(2)])
+print(locals()["URL_heroes" + str(3)])
+print(locals()["URL_heroes" + str(4)])
+print(locals()["URL_heroes" + str(5)])
+print(locals()["URL_heroes" + str(6)])
+print(locals()["URL_heroes" + str(7)])
+print(locals()["URL_heroes" + str(8)])
+print(locals()["URL_heroes" + str(9)])

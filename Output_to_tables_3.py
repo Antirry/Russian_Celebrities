@@ -75,7 +75,6 @@ for Title in Titles:
 
     h2 = 3
     i1 = 0
-    cell_list = len(globals()["Data_heroes_Image_URL" + str(i)])
 
     Data_heroes_Image_URL_1 = globals()["Data_heroes_Image_URL" + str(i)]
     for cell in range(cell_list):
@@ -90,7 +89,7 @@ for Title in Titles:
         time.sleep(1)
         print("Sleep Zzzz update_acell")
 
-    cell_list = WorkSheet.range('E3:E' + str(len(globals()["Data_heroes_Description_Image" + str(i)]) + 2))
+    cell_list = WorkSheet.range('E3:E' + str(len(globals()["Data_Page_title" + str(i)]) + 2))
     time.sleep(1)
     print("Sleep Zzzz ")
     i1 = 0

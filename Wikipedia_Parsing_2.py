@@ -17,7 +17,7 @@ for Title in Titles:
         print("loading")
         print(link)
 
-        if "http://ru.wikipedia.org" in link:
+        if "ru.wikipedia.org" in link:
 
             req1 = requests.get(link)
             req = req1.text.encode('utf-8')
