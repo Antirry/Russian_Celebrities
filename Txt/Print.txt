@@ -13,50 +13,88 @@ print(locals()["URL_heroes" + str(9)])
 
 Wikipedia_Parsing_2.py
 
+variables_Wikipedia_Parsing_2 = [v for v in globals().keys() if not v.startswith('_')]
+
+for variable in variables_Wikipedia_Parsing_2:
+    if "Data_Page_title" in variable:
+        print("\n", i)
+        print(variable)
+    if "Data_heroes_title" in variable:
+        print("\n", i)
+        print(variable)
+    if "Data_heroes_Description_Image" in variable:
+        print("\n", i)
+        print(variable)
+    if "Data_heroes_Image_URL" in variable:
+        print("\n", i)
+        print(variable)
+    i += 1
+
+
+print("\n 0 \n")
+
 print(globals()["Data_Page_title" + str(0)])
 print(globals()["Data_heroes_title" + str(0)])
 print(globals()["Data_heroes_Description_Image" + str(0)])
 print(globals()["Data_heroes_Image_URL" + str(0)])
+
+print("\n 1 \n")
 
 print(globals()["Data_Page_title" + str(1)])
 print(globals()["Data_heroes_title" + str(1)])
 print(globals()["Data_heroes_Description_Image" + str(1)])
 print(globals()["Data_heroes_Image_URL" + str(1)])
 
+print("\n 2 \n")
+
 print(globals()["Data_Page_title" + str(2)])
 print(globals()["Data_heroes_title" + str(2)])
 print(globals()["Data_heroes_Description_Image" + str(2)])
 print(globals()["Data_heroes_Image_URL" + str(2)])
+
+print("\n 3 \n")
 
 print(globals()["Data_Page_title" + str(3)])
 print(globals()["Data_heroes_title" + str(3)])
 print(globals()["Data_heroes_Description_Image" + str(3)])
 print(globals()["Data_heroes_Image_URL" + str(3)])
 
+print("\n 4 \n")
+
 print(globals()["Data_Page_title" + str(4)])
 print(globals()["Data_heroes_title" + str(4)])
 print(globals()["Data_heroes_Description_Image" + str(4)])
 print(globals()["Data_heroes_Image_URL" + str(4)])
+
+print("\n 5 \n")
 
 print(globals()["Data_Page_title" + str(5)])
 print(globals()["Data_heroes_title" + str(5)])
 print(globals()["Data_heroes_Description_Image" + str(5)])
 print(globals()["Data_heroes_Image_URL" + str(5)])
 
+print("\n 6 \n")
+
 print(globals()["Data_Page_title" + str(6)])
 print(globals()["Data_heroes_title" + str(6)])
 print(globals()["Data_heroes_Description_Image" + str(6)])
 print(globals()["Data_heroes_Image_URL" + str(6)])
+
+print("\n 7 \n")
 
 print(globals()["Data_Page_title" + str(7)])
 print(globals()["Data_heroes_title" + str(7)])
 print(globals()["Data_heroes_Description_Image" + str(7)])
 print(globals()["Data_heroes_Image_URL" + str(7)])
 
+print("\n 8 \n")
+
 print(globals()["Data_Page_title" + str(8)])
 print(globals()["Data_heroes_title" + str(8)])
 print(globals()["Data_heroes_Description_Image" + str(8)])
 print(globals()["Data_heroes_Image_URL" + str(8)])
+
+print("\n 9 \n")
 
 print(globals()["Data_Page_title" + str(9)])
 print(globals()["Data_heroes_title" + str(9)])

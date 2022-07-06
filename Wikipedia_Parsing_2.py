@@ -66,3 +66,17 @@ for Title in Titles:
                 globals()["Data_heroes_Description_Image" + str(i)].append("Нет описания картинки в таблице")
                 globals()["Data_heroes_Image_URL" + str(i)].append("Нет картинки в таблице")
     i += 1
+
+i = 0
+variables_Wikipedia_Parsing_2 = [v for v in globals().keys() if not v.startswith('_')]
+
+for variable in variables_Wikipedia_Parsing_2:
+    if "Data_Page_title" in variable:
+        print("\n", "[", i, "]", "   ", variable)
+    if "Data_heroes_title" in variable:
+        print("\n", "[", i, "]", "   ", variable)
+    if "Data_heroes_Description_Image" in variable:
+        print("\n", "[", i, "]", "   ", variable)
+    if "Data_heroes_Image_URL" in variable:
+        print("\n", "[", i, "]", "   ", variable)
+    i += 1
