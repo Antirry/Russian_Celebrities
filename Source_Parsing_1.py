@@ -53,13 +53,8 @@ for gallery in galleries:
             continue
     i += 1
 
-print(locals()["URL_heroes" + str(0)])
-print(locals()["URL_heroes" + str(1)])
-print(locals()["URL_heroes" + str(2)])
-print(locals()["URL_heroes" + str(3)])
-print(locals()["URL_heroes" + str(4)])
-print(locals()["URL_heroes" + str(5)])
-print(locals()["URL_heroes" + str(6)])
-print(locals()["URL_heroes" + str(7)])
-print(locals()["URL_heroes" + str(8)])
-print(locals()["URL_heroes" + str(9)])
+variables_Source_Parsing_1 = [v for v in globals().keys() if not v.startswith('_')]
+
+for variable in variables_Source_Parsing_1:
+    if "URL_heroes" in variable:
+        print(variable)
